@@ -10,3 +10,13 @@ jobs:
             - run: mvn -v
             - run: docker -v
             - run: java --version 
+            - name: build this shit
+              run: mvn package
+    build-an-imiage:
+        needs: start-with-actions
+        runs-on: ubuntu-latest
+        steps:
+            - name: checkout
+              uses: actions/checkout@v4
+            - name: use mvn to build image
+              run: mvn spring-boot:build-image
