@@ -5,3 +5,8 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - run: echo "Das wurde von ${{github.actor}} gestartet"
+            - name: Checkout
+              uses: actions/checkout@v4 
+            - run: mvn -v
+            - run: docker -v
+            - run: java --version 
