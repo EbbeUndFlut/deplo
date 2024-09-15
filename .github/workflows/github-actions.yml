@@ -11,7 +11,7 @@ jobs:
             - run: docker -v
             - run: curl -O https://download.java.net/java/GA/jdk22.0.2/c9ecb94cd31b495da20a27d4581645e8/9/GPL/openjdk-22.0.2_linux-aarch64_bin.tar.gz
             - run: tar -xvzf openjdk-22.0.2_linux-aarch64_bin.tar.gz
-            - run: ls -l openjdk-22.0.2_linux-aarch64_bin/
+            - run: export JAVA_HOME=jdk-22.0.2/
             - run: java --version 
             - name: build this shit
               run: mvn package
