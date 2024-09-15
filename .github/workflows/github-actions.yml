@@ -1,0 +1,7 @@
+name: deploy
+on: [push]
+jobs:
+    start-with-actions:
+        runs-on: ubuntu-latest
+        steps:
+            - run: echo "Das wurde von ${{github.actor}} gestartet"
