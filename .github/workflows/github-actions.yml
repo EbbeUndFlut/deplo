@@ -22,5 +22,6 @@ jobs:
         steps:
             - name: checkout
               uses: actions/checkout@v4
+            - run: java --version
             - name: use mvn to build image
               run: mvn spring-boot:build-image
